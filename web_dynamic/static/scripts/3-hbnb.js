@@ -25,7 +25,7 @@ $.ajax({
     dataType: 'json',
     contentType: 'application/json',
     success: function (data) {
-      for (let k = 0; i < data.length; k++) {
+      for (let k = 0; k < data.length; k++) {
         const placeData = data[k];
         $('.places ').append('<article><h2>' + placeData.name + '</h2><div class="price_by_night"><p>$' + placeData.price_by_night + '</p></div><div class="information"><div class="max_guest"><div class="guest_image"></div><p>' + placeData.max_guest + '</p></div><div class="number_rooms"><div class="bed_image"></div><p>' + placeData.number_rooms + '</p></div><div class="number_bathrooms"><div class="bath_image"></div><p>' + placeData.number_bathrooms + '</p></div></div><div class="description"><p>' + placeData.description + '</p></div></article>');
       }
